@@ -6,19 +6,7 @@ export function StepOne() {
   return (
     <View style={containerStyle}>
       <Text wordWrap={true}>
-        Edit App.tsx to make changes to this screen. Then come back to see your
-        changes. Changes should reflect live thanks to Hot Reloading. 🔥
-      </Text>
-      <Text>
-        {`
-          <p style="color: rgb(255,72,38);"> 
-            <center>
-              <img src="${dogImg}" alt="doggy" />  
-            </center>
-            <center>You can even use <i><strong>Rich Html</strong></i> text like this if you want 😎.</center>
-          </p>
-          <hr />
-        `}
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aut accusamus quos voluptates accusantium dolorum delectus labore maxime! Placeat eius mollitia vero maxime consequatur blanditiis voluptates voluptatum ad cum neque.
       </Text>
     </View>
   );

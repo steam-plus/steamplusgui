@@ -4,50 +4,44 @@ import React from "react";
 import open from "open";
 
 export function StepTwo() {
-  const btnHandler = useEventHandler<QPushButtonSignals>(
+  const steamlibrary = useEventHandler<QPushButtonSignals>(
     {
-      clicked: () => open("https://react.nodegui.org").catch(console.log)
+      clicked: () => open("steam://open/games").catch(console.log),
+    },
+    []
+  );
+  const link = useEventHandler<QPushButtonSignals>(
+    {
+      clicked: () => open("https://www.google.com").catch(console.log),
     },
     []
   );
   return (
     <View style={containerStyle}>
-      <Text style={textStyle} wordWrap={true}>
-        {`
-          <ol>
-            <li>
-                Open chrome and navigate to chrome://inspect. You should see a target below with your app.
-            </li>
-            <br/>
-              <li>
-                  Next click on  "Open dedicated DevTools for Node"
-              </li>
-              <br/>
-            <li>
-                On the dedicated devtools. Click on Source > Node > "Your node process"
-            </li>
-          </ol>
-        `}
-      </Text>
       <Button
         style={btnStyle}
-        on={btnHandler}
-        text={`Open React NodeGui docs`}
+        on={link}
+        text={`Link account`}
+      ></Button>
+      <Button
+        style={btnStyle}
+        on={steamlibrary}
+        text={`Open your Steam library`}
       ></Button>
     </View>
   );
 }
 
 const containerStyle = `
-  flex: 1;
-  justify-content: 'space-around';
-`;
+      flex: 1;
+      justify-content: 'space-around';
+      `;
 
 const textStyle = `
-  padding-right: 20px;
-`;
+      padding-right: 20px;
+      `;
 
 const btnStyle = `
-  margin-horizontal: 20px;
-  height: 40px;
-`;
+      margin-horizontal: 20px;
+      height: 40px;
+      `;
